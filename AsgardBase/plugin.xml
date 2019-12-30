@@ -1,0 +1,83 @@
+<plugin name='asgard-base' version='0.1' grailsVersion='2.2.3 &gt; *'>
+  <author>Your name</author>
+  <title>Asgard Base Plugin</title>
+  <description>Brief summary/description of the plugin.
+</description>
+  <documentation>http://grails.org/plugin/asgard-base</documentation>
+  <type>AsgardBaseGrailsPlugin</type>
+  <resources>
+    <resource>ApplicationResources</resource>
+    <resource>IndexController</resource>
+    <resource>LoginController</resource>
+    <resource>LogoutController</resource>
+    <resource>ReportsController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.AsgardScriptController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.AutoCompleteController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.BaseController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.DashboardController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.DomainServiceController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.EmpresaController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.EnderecoController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.EstadoController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.GridController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.JavascriptController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.MunicipioController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.PaisController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.ParametrosGeraisController</resource>
+    <resource>com.br.asgardtecnologia.erp.security.LoginController</resource>
+    <resource>com.br.asgardtecnologia.erp.security.LogoutController</resource>
+    <resource>com.br.asgardtecnologia.erp.security.PerfilController</resource>
+    <resource>com.br.asgardtecnologia.erp.security.UsuarioController</resource>
+    <resource>com.br.asgardtecnologia.erp.security.UsuarioPerfilController</resource>
+    <resource>com.br.asgardtecnologia.erp.base.Empresa</resource>
+    <resource>com.br.asgardtecnologia.erp.base.Endereco</resource>
+    <resource>com.br.asgardtecnologia.erp.base.Estado</resource>
+    <resource>com.br.asgardtecnologia.erp.base.Municipio</resource>
+    <resource>com.br.asgardtecnologia.erp.base.Pais</resource>
+    <resource>com.br.asgardtecnologia.erp.base.ParametrosGerais</resource>
+    <resource>com.br.asgardtecnologia.erp.base.Widget</resource>
+    <resource>com.br.asgardtecnologia.erp.security.Perfil</resource>
+    <resource>com.br.asgardtecnologia.erp.security.Requestmap</resource>
+    <resource>com.br.asgardtecnologia.erp.security.Usuario</resource>
+    <resource>com.br.asgardtecnologia.erp.security.UsuarioPerfil</resource>
+    <resource>com.br.asgardtecnologia.base.net.HttpClientService</resource>
+    <resource>com.br.asgardtecnologia.erp.base.BaseService</resource>
+    <resource>com.br.asgardtecnologia.erp.base.EmpresaService</resource>
+    <resource>com.br.asgardtecnologia.erp.base.SecurityService</resource>
+    <resource>com.br.asgardtecnologia.taglib.BreadcrumbTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.ButtonsTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.DateFieldsTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.DynamicFieldsTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.FieldsTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.FiltersTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.FormsTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.GridTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.LabeledFieldsTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.MenuTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.RemoteTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.RemoteTagRendererTagLib</resource>
+    <resource>com.br.asgardtecnologia.taglib.WidgetsTagLib</resource>
+    <resource>twitter.bootstrap.scaffolding.AlertsTagLib</resource>
+    <resource>twitter.bootstrap.scaffolding.FormsTagLib</resource>
+    <resource>twitter.bootstrap.scaffolding.PaginationTagLib</resource>
+  </resources>
+  <repositories>
+    <repository name='https://repo.grails.org/grails/plugins' url='https://repo.grails.org/grails/plugins/' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='http://repo.grails.org/grails/plugins/' url='http://repo.grails.org/grails/plugins/' />
+  </repositories>
+  <dependencies />
+  <plugins>
+    <compile>
+      <plugin group='org.grails.plugins' name='jrimum-bopepo' version='0.4' />
+      <plugin group='org.grails.plugins' name='spring-security-core' version='1.2.7.3' />
+    </compile>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.2.3' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>

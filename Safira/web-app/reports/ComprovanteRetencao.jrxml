@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ComprovanteRendimentos" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="082a226d-2eef-4bae-a650-d658510fe847">
+	<property name="ireport.zoom" value="1.210000000000003"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="192"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="parceiro_negocios" class="java.lang.Object"/>
+	<field name="emissao" class="java.util.Date"/>
+	<field name="receita" class="java.lang.Object"/>
+	<field name="base_calculo" class="java.lang.Double"/>
+	<field name="valor_total" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="256">
+			<staticText>
+				<reportElement uuid="2a5c9bb4-42b0-4483-9071-0867d9c6fe8f" x="0" y="215" width="388" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. Relação de Pagamentos e Retenções]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="12d69b13-bafb-4edc-a1de-af750023f7a1" x="42" y="0" width="60" height="8"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[VALORES EM REAIS]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="eccaac32-dbcb-44a2-91d7-7d322cb9a118" x="0" y="0" width="555" height="62"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<frame>
+				<reportElement uuid="9cfef422-bd1c-4edf-a712-075e80d7067a" x="0" y="0" width="277" height="62"/>
+				<box>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<image>
+					<reportElement uuid="57bbe64b-78f0-4659-8f00-241abe09a077" x="3" y="4" width="101" height="55"/>
+				</image>
+				<staticText>
+					<reportElement uuid="ea44e75a-b159-4b99-8d7f-5fbcd48b604c" x="86" y="11" width="152" height="21"/>
+					<textElement>
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[MINISTÉRIO DA FAZENDA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement uuid="9d0fbb8a-6612-4c98-aaf3-78fab5f0f807" x="86" y="32" width="191" height="13"/>
+					<textElement>
+						<font fontName="Arial" size="10" isBold="true"/>
+					</textElement>
+					<text><![CDATA[SECRETARIA DA RECEITA FEDERAL]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="ac70c5f0-0c24-4b0c-b8eb-2fd125b6456b" x="277" y="0" width="278" height="62"/>
+			</frame>
+			<staticText>
+				<reportElement uuid="98c5212d-7f65-4dc9-acd1-3a0058d5f222" x="309" y="4" width="232" height="41"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[COMPROVANTE ANUAL DE RETENÇÃO DE IRPJ, CSLL, Cofins e PIS/Pasep (Lei nº 9.430, de 1996, art. 64)]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="18a0577c-b41e-4c84-9383-197e92ea77f9" x="345" y="45" width="84" height="14"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Ano-Calendário]]></text>
+			</staticText>
+			<textField pattern="yyyy" isBlankWhenNull="true">
+				<reportElement uuid="055cf4e8-70f1-4f41-9d76-5b2ec0c358e0" x="429" y="45" width="84" height="14"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{emissao}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement uuid="33e307b8-ab04-4529-aca9-84a5bfbaf335" x="1" y="101" width="305" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1. Fonte Pagadora]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="bf8278a1-493d-4ae8-80ae-b56ff6b4928b" x="1" y="114" width="555" height="32"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="98c92e38-7744-45ff-8a31-941b840da7c2" x="2" y="1" width="407" height="31"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="ac83653b-5c3a-45ef-b74b-09f0d8d07797" x="3" y="3" width="95" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NOME EMPRESARIAL / NOME]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="bb8b115f-e7b7-46c0-9769-d7c97e1d31e6" x="0" y="12" width="407" height="19"/>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="37a8ab93-d01e-4777-9c85-db47274137ef" x="409" y="1" width="145" height="31"/>
+					<staticText>
+						<reportElement uuid="44306646-f206-49ed-8361-f7f8b542b96c" x="3" y="3" width="38" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[CNPJ / CPF]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="383d4b3f-e657-4a98-8a86-dcf747d0919e" x="3" y="12" width="142" height="19"/>
+						<textElement/>
+						<text><![CDATA[00.348.003/0001-10]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="3d72236f-ab9b-432f-9f1e-018a2a190f59" x="1" y="169" width="403" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. Pessoa Jurídica Fornecedora do bem ou Prestadora do Serviço]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="7cb17ed6-b750-4ebd-be2b-020240ec698a" x="0" y="182" width="555" height="26"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="30ebff6e-5b7b-4e31-ac77-5136761fa3d5" x="410" y="1" width="145" height="25"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="583346fe-ac0d-42d9-92e9-2cc3ddaf347e" x="4" y="1" width="25" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[CNPJ]]></text>
+					</staticText>
+					<textField pattern="" isBlankWhenNull="true">
+						<reportElement uuid="4cedd1ee-1444-4f67-8989-d49974df299d" x="5" y="9" width="134" height="13"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[$F{parceiro_negocios}.cnpj_cpf.substring(0, 2)+"."+
+$F{parceiro_negocios}.cnpj_cpf.substring(2, 5)+"."+
+$F{parceiro_negocios}.cnpj_cpf.substring(5, 8)+"/"+
+$F{parceiro_negocios}.cnpj_cpf.substring(8, 12)+"-"+
+$F{parceiro_negocios}.cnpj_cpf.substring(12, 14)]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement uuid="5526dacb-a996-426f-a884-693e8b3e184b" x="1" y="1" width="409" height="25"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="4de3e633-09da-460b-a97c-d0f7662f03b3" x="5" y="2" width="95" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NOME COMPLETO]]></text>
+					</staticText>
+				</frame>
+				<textField isBlankWhenNull="true">
+					<reportElement uuid="32bc5ec7-2582-420f-bf22-79f67f1dd0e0" x="6" y="10" width="395" height="13"/>
+					<textElement/>
+					<textFieldExpression><![CDATA[$F{parceiro_negocios}.nome]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement uuid="4ac39a82-4280-49e3-9a5c-f344958719f9" x="0" y="236" width="554" height="20"/>
+				<box>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<frame>
+					<reportElement uuid="255bdf86-f326-474d-aae9-810e3bc90392" x="0" y="0" width="138" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="03998c14-a8ce-40ff-99d4-a1db8c50d039" x="6" y="4" width="131" height="13"/>
+						<textElement textAlignment="Center"/>
+						<text><![CDATA[MÊS DO PAGAMENTO]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="81ce5b41-2e64-45a4-af13-16f94755a910" x="139" y="0" width="138" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="32fb6cc9-b983-4637-97b2-599f96114a0d" x="11" y="4" width="126" height="13"/>
+						<textElement textAlignment="Center"/>
+						<text><![CDATA[CÓDIGO DA RETENÇÃO]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="5acbd8b5-7459-491d-987d-e46a1545e3cc" x="277" y="0" width="138" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="edc70946-1b6b-4cc3-8f9e-f9ce26095355" x="11" y="4" width="126" height="13"/>
+						<textElement textAlignment="Center"/>
+						<text><![CDATA[VALOR PAGO]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="f211eec7-8fd9-4074-85e3-9bd1a9f6b64a" x="415" y="0" width="138" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<staticText>
+						<reportElement uuid="91d23148-f273-4e57-bd81-b333f0cab8b1" x="14" y="4" width="123" height="13"/>
+						<textElement textAlignment="Center"/>
+						<text><![CDATA[VALOR RETIDO]]></text>
+					</staticText>
+				</frame>
+			</frame>
+		</band>
+	</title>
+	<detail>
+		<band height="20" splitType="Stretch">
+			<frame>
+				<reportElement uuid="d77aa530-8bdb-4743-9c0b-fb08e39eed32" x="0" y="0" width="554" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="4ac39a82-4280-49e3-9a5c-f344958719f9" x="0" y="0" width="554" height="20"/>
+					<frame>
+						<reportElement uuid="255bdf86-f326-474d-aae9-810e3bc90392" x="0" y="0" width="138" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.0"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textField pattern="MMM" isBlankWhenNull="true">
+							<reportElement uuid="03998c14-a8ce-40ff-99d4-a1db8c50d039" x="3" y="3" width="133" height="13"/>
+							<textElement textAlignment="Center"/>
+							<textFieldExpression><![CDATA[$F{emissao}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement uuid="81ce5b41-2e64-45a4-af13-16f94755a910" x="139" y="0" width="138" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.0"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textField isBlankWhenNull="true">
+							<reportElement uuid="32fb6cc9-b983-4637-97b2-599f96114a0d" x="0" y="3" width="136" height="13"/>
+							<textElement textAlignment="Center"/>
+							<textFieldExpression><![CDATA[$F{receita}.codigo]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement uuid="5acbd8b5-7459-491d-987d-e46a1545e3cc" x="277" y="0" width="138" height="20"/>
+						<box>
+							<pen lineWidth="0.0"/>
+							<topPen lineWidth="0.0"/>
+							<leftPen lineWidth="0.0"/>
+							<bottomPen lineWidth="0.0"/>
+							<rightPen lineWidth="0.5"/>
+						</box>
+						<textField pattern="#,##0.00" isBlankWhenNull="true">
+							<reportElement uuid="edc70946-1b6b-4cc3-8f9e-f9ce26095355" x="82" y="3" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{base_calculo}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement uuid="f211eec7-8fd9-4074-85e3-9bd1a9f6b64a" x="415" y="0" width="138" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.0"/>
+						</box>
+						<textField pattern="#,##0.00" isBlankWhenNull="true">
+							<reportElement uuid="91d23148-f273-4e57-bd81-b333f0cab8b1" x="82" y="3" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{valor_total}]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+			</frame>
+		</band>
+	</detail>
+	<summary>
+		<band height="400">
+			<staticText>
+				<reportElement uuid="826712ef-fd71-4929-89d2-0b9908398d9b" x="1" y="2" width="413" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[4.Informações Complementares]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="80d5b00e-f250-42a6-948b-15a6b2447eb9" x="1" y="15" width="554" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement uuid="9c862949-235b-42d4-907d-eca6ae2572e5" x="1" y="54" width="413" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[5.Responsável pelas Informações]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="bc672201-f146-462c-a7ed-3632591c950a" x="3" y="66" width="553" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="e0ebd3b9-857a-4e0a-9d85-25a5dd8238da" x="0" y="0" width="306" height="25"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="83568e25-2847-4f6b-924a-9fcce6b027a2" x="4" y="1" width="25" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NOME]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="4dc7f7f6-b882-4582-a3d9-e872f7bd9f77" x="3" y="9" width="200" height="15"/>
+						<textElement/>
+						<text><![CDATA[Marina Mendes Gomes Pereira]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="2e2ec2ef-0cf7-41c1-9dc7-3a5b0406c74e" x="304" y="1" width="100" height="24"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="106677ac-7dd7-46d9-820d-539fee4add11" x="10" y="0" width="25" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[DATA]]></text>
+					</staticText>
+					<textField evaluationTime="Report" pattern="dd/MM/yyyy">
+						<reportElement uuid="16fbca1d-4ea2-465c-a1b5-4fc74fffb836" x="3" y="8" width="95" height="15"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement uuid="70f27c87-5bf9-48b4-ba69-e6349d8031e1" x="403" y="1" width="149" height="24"/>
+					<staticText>
+						<reportElement uuid="1930920d-186e-4b94-95ec-adff132125fe" x="6" y="0" width="40" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[ASSINATURA]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="c6db0aa8-8f57-4b9b-a03f-11aea2a6bf12" x="1" y="92" width="100" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Aprovado pela IN/SRF nº 480/2004]]></text>
+			</staticText>
+		</band>
+	</summary>
+</jasperReport>

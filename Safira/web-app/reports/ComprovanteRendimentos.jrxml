@@ -1,0 +1,742 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ComprovanteRendimentos" language="groovy" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7e97bf7e-a139-46dc-ac84-423f68040427">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="153"/>
+	<parameter name="total_darf" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="total" class="java.lang.Double"/>
+	<field name="cnpj_cpf" class="java.lang.String"/>
+	<field name="nome" class="java.lang.String"/>
+	<field name="ano" class="java.lang.String"/>
+	<field name="valor_tributavel" class="java.lang.Double"/>
+	<field name="valor_imposto" class="java.lang.Double"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<detail>
+		<band height="802" splitType="Stretch">
+			<frame>
+				<reportElement uuid="3898f670-9e3e-4c5e-b93b-0fb1fe0058ba" x="0" y="0" width="555" height="62"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="f9a417de-9e7e-487d-be73-3f29fd23f93e" x="0" y="0" width="277" height="62"/>
+					<box>
+						<rightPen lineWidth="0.75"/>
+					</box>
+					<image>
+						<reportElement uuid="43cf9b9f-aeba-4fef-a591-608967f538ff" x="3" y="4" width="101" height="55"/>
+					</image>
+					<staticText>
+						<reportElement uuid="17218f3f-6247-4eb4-9291-2d3addeb8481" x="86" y="11" width="152" height="21"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[MINISTÉRIO DA FAZENDA]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="e04ee780-a704-4d5b-aaac-5ece191a6ed4" x="86" y="32" width="191" height="13"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[SECRETARIA DA RECEITA FEDERAL]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="f6e40a57-d992-4141-9f10-0b0682727a8d" x="277" y="0" width="278" height="62"/>
+					<staticText>
+						<reportElement uuid="4c161b48-8ce3-4522-983f-f372ad715469" x="32" y="4" width="214" height="13"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[COMPROVANTE DE RENDIMENTOS PAGOS]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="c6e8b121-9f7c-437a-84f2-5da5b7a526f9" x="86" y="17" width="107" height="13"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[E DE RETENÇÃO DE]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="6357234e-a362-45f2-95fb-023918dc3355" x="64" y="30" width="159" height="13"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[IMPOSTO DE RENDA NA FONTE]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="a232a17f-781d-43b4-b8a7-d85ef9a33e9e" x="71" y="45" width="84" height="14"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<text><![CDATA[Ano-Calendário]]></text>
+					</staticText>
+					<textField pattern="yyyy" isBlankWhenNull="true">
+						<reportElement uuid="18cdf4fa-a23e-465e-b595-5787ff012ade" x="155" y="45" width="84" height="14"/>
+						<textElement>
+							<font fontName="Arial" size="10" isBold="true"/>
+						</textElement>
+						<textFieldExpression><![CDATA[$F{ano}]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="52787d88-c9dd-441d-b803-9b29261f7fa1" x="1" y="101" width="305" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.FONTE PAGADORA PESSOA JURÍDICA OU PESSOA FÍSICA]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="dcc6d33c-2446-4f47-b513-0adf0f804b28" x="1" y="114" width="555" height="32"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="d4d9446c-7baa-4e79-af78-9f66de342216" x="2" y="1" width="407" height="31"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="c19d642c-bec7-4975-96a5-13b5e68d39b3" x="3" y="3" width="95" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NOME EMPRESARIAL / NOME]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="1044e479-151d-4baf-9d61-a138045f422f" x="0" y="12" width="407" height="19"/>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[EMPRESA BRASILEIRA DE PESQUISA AGROPECUARIA]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="74eef1b0-9662-4239-afbd-19b6bfa096c6" x="409" y="1" width="145" height="31"/>
+					<staticText>
+						<reportElement uuid="a380434c-fcac-4694-876c-a921b2f2707d" x="3" y="3" width="38" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[CNPJ / CPF]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="4b6693d2-55ec-45a6-bc67-4c582111838e" x="3" y="12" width="142" height="19"/>
+						<textElement/>
+						<text><![CDATA[00.348.003/0001-10]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="9b352a92-6b82-49bf-ada3-383a4f6b5dee" x="1" y="169" width="305" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[2. PESSOA FÍSICA BENEFICIÁRIA DOS RENDIMENTOS]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="5b26253b-14a9-447d-8083-330b7237a1f5" x="0" y="182" width="555" height="52"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="85db404c-dd2b-43dd-a778-2861b99fe2aa" x="1" y="1" width="103" height="25"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="28160b40-e842-40f8-ba5f-84c399fefd8b" x="4" y="1" width="25" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[CPF]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement uuid="64d9030a-fa84-4f39-8325-da2e22e63966" x="5" y="9" width="94" height="13"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[$F{cnpj_cpf}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement uuid="b95112c4-15c4-473c-82f8-e20a2cf1c7ed" x="104" y="1" width="451" height="25"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="d403e0e6-234f-45a4-85f8-37eb66eec3ae" x="5" y="2" width="95" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NOME COMPLETO]]></text>
+					</staticText>
+					<textField isBlankWhenNull="true">
+						<reportElement uuid="b9334e20-71d0-4bad-a9ab-a0d629bcc779" x="5" y="9" width="432" height="13"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement uuid="12607f95-3f45-403f-b9b8-8562d87b4725" x="0" y="27" width="555" height="25"/>
+					<staticText>
+						<reportElement uuid="aeeee5b0-71a1-45d8-8d99-88933d427f34" x="4" y="0" width="99" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NATUREZA DO RENDIMENTO]]></text>
+					</staticText>
+					<textField>
+						<reportElement uuid="8d70266a-66be-4203-8b1e-eb14048674ef" x="6" y="8" width="232" height="13"/>
+						<textElement/>
+						<textFieldExpression><![CDATA["Rendimentos do trabalho sem vínculo empregatício"]]></textFieldExpression>
+					</textField>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="625f8aaa-0ea3-4cbb-893c-d11017d1459f" x="0" y="256" width="388" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[3. RENDIMENTOS TRIBUTÁVEIS, DEDUÇÕES E IMPOSTO RETIDO NA FONTE]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="e5cb664f-14fc-4b73-a844-bb8bb41587b2" x="410" y="256" width="145" height="14"/>
+				<staticText>
+					<reportElement uuid="04149ee6-abbc-417e-a95c-677cb5cdd303" x="42" y="3" width="60" height="8"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALORES EM REAIS]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement uuid="a3223f30-64d2-470d-8997-b0c816e70340" x="1" y="270" width="554" height="96"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="c06d0be3-1fab-4942-b5c9-181231440a45" x="-1" y="0" width="410" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="0eaa20fb-c49e-422a-91c2-fc6bacc09c65" x="3" y="1" width="407" height="18"/>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[01. Total dos Rendimentos (Inclusive férias)]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="9f34fd2d-250b-445f-8b14-5b3632cae3eb" x="-1" y="19" width="410" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="0579ae2b-737b-497e-a54c-904cb052af40" x="3" y="1" width="407" height="18"/>
+						<box>
+							<bottomPen lineWidth="0.0"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[02. Contribuição Previdenciária Oficial]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="2480350f-c6ed-47d1-9db5-34c214a75ac2" x="-1" y="38" width="410" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="4ad8a8e3-486e-4d59-9a97-8d836f9e9091" x="3" y="1" width="407" height="18"/>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[03. Pensão, Proventos de Aposentadoria ou Reforma, Reforma e Pensão (65 anos ou mais)]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="89f9adc1-ed13-4cb8-b925-5c5426036595" x="-1" y="57" width="410" height="20"/>
+					<box>
+						<bottomPen lineWidth="0.5"/>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="bfe12a52-070e-4ae6-afe6-c53c3e3bc190" x="3" y="2" width="407" height="18"/>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[04. Pensão Alimentícia (Informar o beneficiário no Quadro 6)]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="739490b8-1f39-4d7c-83ac-2f4f36b3f9c6" x="-1" y="76" width="410" height="20"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="8c4381c0-80b0-4df5-851b-cef6652c29b8" x="3" y="2" width="407" height="18"/>
+						<textElement>
+							<font size="9"/>
+						</textElement>
+						<text><![CDATA[05. Imposto de Renda Retido]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="3d4d995c-cc43-4daf-bfb5-2a41aed30edc" x="409" y="1" width="145" height="95"/>
+					<frame>
+						<reportElement uuid="cc4bb413-4001-4000-92ac-eb51e5320787" x="0" y="-1" width="144" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<textField pattern="#,##0.00" isBlankWhenNull="true">
+							<reportElement uuid="1d1a5bdf-aa55-4c7e-aa6a-7d8daa6fc987" x="53" y="3" width="83" height="13"/>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{valor_tributavel}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement uuid="035a13a9-b755-4da1-a5a5-510936d1aa32" x="0" y="18" width="144" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<textField pattern="#,##0.00" isBlankWhenNull="true">
+							<reportElement uuid="99d589c0-b235-4e0a-ba54-cb75d2a5e6cd" x="82" y="4" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$F{valor_imposto}]]></textFieldExpression>
+						</textField>
+					</frame>
+					<frame>
+						<reportElement uuid="1aa29294-6e96-4949-9a53-03b305c2be09" x="1" y="37" width="143" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<staticText>
+							<reportElement uuid="d408a0a2-471b-4f41-8b44-916d9d85b05b" x="82" y="6" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="15d10b41-5187-4cce-84e4-dd008554ff11" x="1" y="56" width="143" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<staticText>
+							<reportElement uuid="79014bdd-e043-456e-b43c-575f79747ccc" x="82" y="6" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="4c90bad2-edd9-4d87-a90b-6d84d5f54884" x="0" y="76" width="144" height="19"/>
+						<textField pattern="#,##0.00" isBlankWhenNull="true">
+							<reportElement uuid="1d1a5bdf-aa55-4c7e-aa6a-7d8daa6fc987" x="53" y="3" width="83" height="13"/>
+							<textElement textAlignment="Right"/>
+							<textFieldExpression><![CDATA[$P{total_darf}.toDouble()]]></textFieldExpression>
+						</textField>
+					</frame>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="1228521f-bbf4-45a2-9fe1-b8f48c95d478" x="0" y="382" width="388" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[4. RENDIMENTOS ISENTOS E NÃO TRIBUTÁVEIS]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="4ba3d8cc-89ea-45a4-bdb2-349ffaeb2aa8" x="1" y="396" width="554" height="154"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="25523d51-bc83-4a78-987d-a617d7a6234b" x="1" y="2" width="430" height="152"/>
+					<box>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<frame>
+						<reportElement uuid="488ab13f-2942-4bf0-a402-71bc2a6df3f9" x="-2" y="1" width="431" height="21"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="00b42cff-3dee-40c8-b922-ea16b4fb820b" x="2" y="1" width="429" height="20"/>
+							<textElement>
+								<font size="9"/>
+							</textElement>
+							<text><![CDATA[01. Parcela Isenta dos Proventos de Aposentadoria, Reserva e Pensão (65 anos ou mais)]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="5fb32a52-e698-4231-be04-bfef3e267f3c" x="0" y="22" width="429" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="fe42e7fe-7da5-4d45-9b67-be62fa6ce2dc" x="1" y="0" width="428" height="20"/>
+							<textElement>
+								<font size="9"/>
+							</textElement>
+							<text><![CDATA[02. Diárias e Ajudas de Custo]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="218f0abf-7366-4e3d-866a-d88222962190" x="0" y="42" width="429" height="25"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="93c21f45-835d-48e3-9f44-7553d3bf8528" x="1" y="0" width="428" height="25"/>
+							<textElement>
+								<font size="9"/>
+							</textElement>
+							<text><![CDATA[03. Pensão, Proventos de Aposentadoria ou Reforma por Moléstia Gravee Aposentadoria ou Reforma por Acidente em Serviço]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="2b3b804b-0fbc-4dbf-b24d-cd85404abfbd" x="0" y="67" width="429" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="39c18836-ec80-45cd-b827-91ea1750ff36" x="0" y="0" width="429" height="20"/>
+							<textElement>
+								<font size="9"/>
+							</textElement>
+							<text><![CDATA[04. Lucro e Dividendo Apurado a partir de 1996 pago por PJ (Lucro Real, Presumido ou Arbitrado)]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="ece34235-0133-4a64-a614-30c5e9947824" x="0" y="87" width="429" height="25"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="1bf444ae-0dae-4bda-b414-ac1c9caf4a05" x="1" y="0" width="428" height="25"/>
+							<textElement>
+								<font size="9" isItalic="false"/>
+							</textElement>
+							<text><![CDATA[05. Valores Pagos ao Titular ou Sócio da microempresa ou Empresa de PequenoPorte exceto Pro labore, Aluguéis ou Serviços Prestados]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="f46b6e88-95df-4f0c-bf7d-5741420f9db2" x="0" y="112" width="429" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="b7779521-a627-44e9-b62b-0b6c6d01dc12" x="0" y="0" width="429" height="20"/>
+							<textElement>
+								<font size="9"/>
+							</textElement>
+							<text><![CDATA[06. Indenizações por rescisão de contrato de trabalho, inclusive a título de PDV e acidente de trabalho]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="a8d70320-7ced-46ea-a13c-224e741b80ad" x="0" y="132" width="429" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+							<rightPen lineWidth="0.0"/>
+						</box>
+						<staticText>
+							<reportElement uuid="e4eaed0b-f8f9-4a45-9842-887de6e156ea" x="1" y="0" width="428" height="20"/>
+							<textElement>
+								<font size="9"/>
+							</textElement>
+							<text><![CDATA[07. Outros (especificar)]]></text>
+						</staticText>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement uuid="d552926b-b0d6-4e7f-93ac-9d56139ce650" x="431" y="0" width="123" height="154"/>
+					<frame>
+						<reportElement uuid="adf4acb1-87e7-4bfb-b08e-59e17e458246" x="-1" y="2" width="123" height="22"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<staticText>
+							<reportElement uuid="af2a6fc2-40f3-447c-87ac-ee3d5aef14e9" x="65" y="2" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="6e139fe4-1c4d-4548-b644-6e7b9164160a" x="-1" y="24" width="123" height="20"/>
+						<staticText>
+							<reportElement uuid="b39e812a-08b9-47a9-95d7-c6d2195924d8" x="65" y="6" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="3ecfa9b3-5798-4dad-97f7-4501974fe9bd" x="-1" y="44" width="123" height="25"/>
+						<box>
+							<topPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<staticText>
+							<reportElement uuid="83443e5e-f4f9-44b2-b28c-9e827dcff62a" x="65" y="9" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="4329ab58-9bc3-4275-97e7-92b6bbfedb76" x="-1" y="69" width="123" height="20"/>
+						<staticText>
+							<reportElement uuid="f2910861-37ec-4c0c-a7bd-791bbbeca77b" x="65" y="5" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="f2057dd3-69db-42a9-812a-b9295dcef7dc" x="-1" y="89" width="123" height="25"/>
+						<box>
+							<topPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<staticText>
+							<reportElement uuid="cd9414bb-0351-4ef7-a610-eb29f1469514" x="65" y="7" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="dfad73bf-2f89-4891-99c4-078445dddc4f" x="-1" y="114" width="123" height="20"/>
+						<staticText>
+							<reportElement uuid="8374798a-4b10-4518-a83e-f7996c4b9c09" x="65" y="4" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="52f4a055-7cc4-49b2-9407-1f446f0d7f24" x="-1" y="134" width="123" height="20"/>
+						<box>
+							<topPen lineWidth="0.5"/>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+						<staticText>
+							<reportElement uuid="c1714c71-676b-4b6c-a725-45e9567ca30c" x="65" y="4" width="54" height="13"/>
+							<textElement textAlignment="Right"/>
+							<text><![CDATA[0,00]]></text>
+						</staticText>
+					</frame>
+				</frame>
+			</frame>
+			<frame>
+				<reportElement uuid="6a752ec8-3bd5-4e61-927d-0204b108d678" x="432" y="382" width="123" height="14"/>
+				<staticText>
+					<reportElement uuid="3f39d8b2-d063-4a8f-b261-b097e49e3ee3" x="31" y="3" width="60" height="8"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALORES EM REAIS]]></text>
+				</staticText>
+			</frame>
+			<staticText>
+				<reportElement uuid="400f946f-fda0-4d46-832d-cbd81cbd0056" x="1" y="587" width="412" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[5. RENDIMENTOS SUJEITOS À TRIBUTAÇÃO EXCLUSIVA (RENDIMENTO LÍQUIDO)]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="e7113fe8-1cf6-438a-9b65-30f1bbd615cf" x="1" y="600" width="553" height="40"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="e2b455b9-31c8-483e-bca1-294bfa98205b" x="0" y="0" width="431" height="40"/>
+					<box>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<frame>
+						<reportElement uuid="62e34424-d6aa-4616-b605-5d96b290112d" x="-1" y="20" width="432" height="20"/>
+						<staticText>
+							<reportElement uuid="d807c6f0-4e4c-489d-b5bc-84635121b80d" x="1" y="0" width="431" height="20"/>
+							<textElement/>
+							<text><![CDATA[02. Outros]]></text>
+						</staticText>
+					</frame>
+					<frame>
+						<reportElement uuid="ff7c4af2-0ed8-4a66-ad68-9c8e5f3e1533" x="-1" y="0" width="432" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+					</frame>
+				</frame>
+				<frame>
+					<reportElement uuid="e18a6996-c7eb-41bb-9b51-086da2f82279" x="431" y="0" width="122" height="40"/>
+					<frame>
+						<reportElement uuid="f601e1f1-127e-4272-8048-967bb391f879" x="0" y="0" width="122" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+					</frame>
+					<frame>
+						<reportElement uuid="4c1faaf6-637c-4970-9f47-d462f35e509f" x="0" y="20" width="122" height="20"/>
+						<box>
+							<bottomPen lineWidth="0.5"/>
+						</box>
+					</frame>
+					<staticText>
+						<reportElement uuid="08e50ad5-b475-4ebd-a601-a8d54d9ddeb0" x="65" y="7" width="54" height="13"/>
+						<textElement textAlignment="Right"/>
+						<text><![CDATA[0,00]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="3fb7852c-d3aa-4be9-aa9b-14bcc675458e" x="65" y="27" width="54" height="13"/>
+						<textElement textAlignment="Right"/>
+						<text><![CDATA[0,00]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="da5b7d7c-ef3b-4ccb-a6bb-cf932634200c" x="1" y="600" width="430" height="20"/>
+				<textElement/>
+				<text><![CDATA[01. Décimo Terceiro Salário]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="cfd6c021-dc22-400d-a8e5-22bc84b823fc" x="0" y="654" width="413" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[6. INFORMAÇÕES COMPLEMENTARES]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="d791f637-c062-4bb6-87cf-796fb4864d60" x="0" y="667" width="554" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+			</frame>
+			<staticText>
+				<reportElement uuid="29b03f7c-652b-4e39-be75-a5f65cd20d7b" x="0" y="706" width="413" height="13"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[7. RESPONSÁVEL PELAS INFORMAÇÕES]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="054bc4ee-8005-4288-9a33-85fcffdcf8ea" x="2" y="718" width="553" height="25"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<frame>
+					<reportElement uuid="3ad1815e-79f2-4060-8fbc-e1a2ff8a8d9c" x="-2" y="0" width="306" height="25"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="d9006151-a64d-4a52-a323-773a5ba4c284" x="4" y="1" width="25" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[NOME]]></text>
+					</staticText>
+					<staticText>
+						<reportElement uuid="91233424-c115-43c4-9fb0-9d7d18e632b7" x="4" y="9" width="200" height="15"/>
+						<textElement/>
+						<text><![CDATA[Marina Mendes Gomes Pereira]]></text>
+					</staticText>
+				</frame>
+				<frame>
+					<reportElement uuid="d24ddbc5-e9c1-4021-acad-d691bb3d7706" x="304" y="1" width="100" height="24"/>
+					<box>
+						<rightPen lineWidth="0.5"/>
+					</box>
+					<staticText>
+						<reportElement uuid="0096b00c-d95c-4e11-b5a0-961b5915f6b2" x="10" y="0" width="25" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[DATA]]></text>
+					</staticText>
+					<textField evaluationTime="Report" pattern="dd/MM/yyyy">
+						<reportElement uuid="24dc9674-5962-4dbf-acd4-58201d1e1673" x="3" y="8" width="95" height="15"/>
+						<textElement/>
+						<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+					</textField>
+				</frame>
+				<frame>
+					<reportElement uuid="6a51e466-94fb-40ad-8f94-c03efbb594ea" x="403" y="1" width="149" height="24"/>
+					<staticText>
+						<reportElement uuid="9df54ebd-3050-4ebf-8f05-dbde5861c501" x="6" y="0" width="40" height="8"/>
+						<textElement>
+							<font size="6"/>
+						</textElement>
+						<text><![CDATA[ASSINATURA]]></text>
+					</staticText>
+				</frame>
+			</frame>
+			<staticText>
+				<reportElement uuid="ff40b3c1-b0a0-4bf3-9cb3-898714de3944" x="0" y="744" width="204" height="11"/>
+				<textElement>
+					<font size="6"/>
+				</textElement>
+				<text><![CDATA[Aprovado pela IN RFB nº 1.215, de 15 de dezembro de 2011.]]></text>
+			</staticText>
+			<frame>
+				<reportElement uuid="24a82fe2-ac68-40d2-b224-ab10f8ece885" x="431" y="586" width="123" height="14"/>
+				<staticText>
+					<reportElement uuid="3908d7ee-b0ce-4158-b2cb-7cae4043a89c" x="31" y="3" width="60" height="8"/>
+					<textElement>
+						<font size="6"/>
+					</textElement>
+					<text><![CDATA[VALORES EM REAIS]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</detail>
+</jasperReport>

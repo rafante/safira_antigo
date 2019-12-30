@@ -1,0 +1,275 @@
+/*
+Asgard Tecnologia
+*/
+
+.ui-autocomplete {
+    max-height: 200px;
+    overflow-y: auto;
+    /* prevent horizontal scrollbar */
+    overflow-x: hidden;
+}
+
+/*.ui-autocomplete-loading {*/
+    /*background: white url('../img/ui-anim_basic_16x16.gif') right center no-repeat;*/
+/*}*/
+
+/* IE 6 doesn't support max-height
+ * we use height instead, but this forces the menu to always be this tall
+ */
+* html .ui-autocomplete {
+    height: 200px;
+}
+
+.field-show-mode {
+    padding-top: 5px;
+    font-weight: bold;border-style: none
+}
+
+.select2-container {
+    width: 100%;
+}
+
+.form-actions {
+    padding-left: 20px !important;
+}
+
+#s2id_autogen2 {
+    width: auto;
+}
+
+/*.action-bar li {*/
+/*display: inline-block;*/
+/*margin: 0 10px 10px;*/
+/*}*/
+
+/*.table th, .table td {*/
+/*padding: 0 0 5px 5px;*/
+/*}*/
+
+.form-actions.form-buttons {
+    display: none;
+}
+
+td > input {
+    width: 100% !important;
+    height: 25px !important;
+    border-style: none !important;
+    padding: 0 0 0 0 !important;
+    margin-bottom: 0 !important;
+}
+
+/*@media (min-width: 768px) {*/
+/*#page {*/
+/*width: 95% !important;*/
+/*}*/
+/*}*/
+
+/* PAGINATION */
+.grailspagination {
+    border-top: 0;
+    margin: 0;
+    padding: 0.3em 0.2em;
+    text-align: center;
+    -moz-box-shadow: 0 0 3px 1px #AAAAAA;
+    -webkit-box-shadow: 0 0 3px 1px #AAAAAA;
+    box-shadow: 0 0 3px 1px #AAAAAA;
+    background-color: #EFEFEF;
+}
+
+.grailspagination a,
+.grailspagination .currentStep {
+    color: #666666;
+    display: inline-block;
+    margin: 0 0.1em;
+    padding: 0.25em 0.7em;
+    text-decoration: none;
+    -moz-border-radius: 0.3em;
+    -webkit-border-radius: 0.3em;
+    border-radius: 0.3em;
+}
+
+.grailspagination a:hover, .grailspagination a:focus,
+.grailspagination .currentStep {
+    background-color: #999999;
+    color: #ffffff;
+    outline: none;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.8);
+}
+
+.no-borderradius .grailspagination a:hover, .no-borderradius .grailspagination a:focus,
+.no-borderradius .grailspagination .currentStep {
+    background-color: transparent;
+    color: #444444;
+    text-decoration: underline;
+}
+
+/* STATUS */
+ul.asg-arrow-list {
+    padding-left: 1.1em;
+    margin: 0;
+    white-space: nowrap;
+}
+
+ul.asg-arrow-list li {
+    display: inline-block;
+    margin-left: -1em;
+    vertical-align: top;
+}
+
+ul.asg-arrow-list li span {
+    vertical-align: top;
+    display: inline-block;
+    border: 1em solid #DEDEDE;
+    line-height: 0em;
+}
+
+ul.asg-arrow-list .asg-arrow-list-before {
+    border-left-color: transparent;
+    border-right-width: 0;
+}
+
+ul.asg-arrow-list .asg-arrow-list-after {
+    border-color: transparent;
+    border-left-color: #DEDEDE;
+    border-right-width: 0;
+}
+
+ul.asg-arrow-list li.asg-arrow-list-selected span {
+    border-color: #B5B9FF;
+}
+
+ul.asg-arrow-list li.asg-arrow-list-selected .asg-arrow-list-before {
+    border-left-color: transparent;
+}
+
+ul.asg-arrow-list li.asg-arrow-list-selected .asg-arrow-list-after {
+    border-color: transparent;
+    border-left-color: #B5B9FF;
+}
+
+ul.asg-arrow-list li:first-child span:first-child {
+    -webkit-border-top-left-radius: 3px;
+    -moz-border-radius-topleft: 3px;
+    border-top-left-radius: 3px;
+    -webkit-border-bottom-left-radius: 3px;
+    -moz-border-radius-bottomleft: 3px;
+    border-bottom-left-radius: 3px;
+}
+
+ul.asg-arrow-list li:last-child span:last-child {
+    -webkit-border-top-right-radius: 3px;
+    -moz-border-radius-topright: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 3px;
+    -moz-border-radius-bottomright: 3px;
+    border-bottom-right-radius: 3px;
+}
+
+/*Windows Phone 8 and Internet Explorer 10*/
+/*Internet Explorer 10 doesn't differentiate device width from viewport width, and thus doesn't properly
+apply the media queries in Bootstrap's CSS. To address this, you can optionally include the following CSS and
+JavaScript to work around this problem until Microsoft issues a fix.*/
+@-webkit-viewport {
+    width: device-width;
+}
+@-moz-viewport {
+    width: device-width;
+}
+@-ms-viewport {
+    width: device-width;
+}
+
+@-o-viewport {
+    width: device-width;
+}
+
+@viewport {
+    width: device-width;
+}
+
+.asg-hide {
+    display: none;
+}
+
+.asg-to-high {
+    float: left;
+    line-height: 30px
+}
+
+/*
+* Scroll
+*/
+
+/*
+Exemplo STATUS:
+<ul class="asg-arrow-list">
+
+<li class="">
+<span>Provisório</span><span class="asg-arrow-list-after"></span>
+</li>
+
+<li class="asg-arrow-list-selected">
+<span class="asg-arrow-list-before"></span><span>Aberto</span><span class="asg-arrow-list-after"></span>
+</li>
+
+<li class="">
+<span class="asg-arrow-list-before"></span><span>Pago</span>
+</li>
+
+</ul>*/
+
+/* "Correções do Template" */
+/*.form-horizontal input[type=number] {
+    width: 98.5%;
+}*/
+
+/* Autocomplete */
+/*.asg-autocomplete {
+    border-color: transparent !important;
+    background-color: transparent !important;
+    font-weight: bold;
+}
+.asg-autocomplete.Hover {
+    border-color: #ccc !important;
+    background-color: #fff !important;
+}*/
+
+/* Alterações no Bootstrap */
+
+.asg-spinner {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    width: 14px;
+    height: 14px;
+
+    border: solid 2px transparent;
+    border-top-color: #49baff;
+    border-left-color: #49baff;
+    border-radius: 10px;
+
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    -moz-animation: nprogress-spinner 400ms linear infinite;
+    -ms-animation: nprogress-spinner 400ms linear infinite;
+    -o-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}
+
+.asg-spinner-error {
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    width: 14px;
+    height: 14px;
+
+    border: solid 2px transparent;
+    border-top-color: red;
+    border-left-color: red;
+    border-radius: 10px;
+
+    -webkit-animation: nprogress-spinner 400ms linear infinite;
+    -moz-animation: nprogress-spinner 400ms linear infinite;
+    -ms-animation: nprogress-spinner 400ms linear infinite;
+    -o-animation: nprogress-spinner 400ms linear infinite;
+    animation: nprogress-spinner 400ms linear infinite;
+}

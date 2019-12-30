@@ -1,0 +1,33 @@
+<plugin name='asgard-license' version='0.1' grailsVersion='2.2.3 &gt; *'>
+  <author>Your name</author>
+  <title>Asgard License Plugin</title>
+  <description>Brief summary/description of the plugin.
+</description>
+  <documentation>http://grails.org/plugin/asgard-license</documentation>
+  <type>AsgardLicenseGrailsPlugin</type>
+  <resources>
+    <resource>LicenseFilters</resource>
+    <resource>LicenseController</resource>
+    <resource>License</resource>
+    <resource>LicenseService</resource>
+  </resources>
+  <repositories>
+    <repository name='https://repo.grails.org/grails/plugins' url='https://repo.grails.org/grails/plugins/' />
+    <repository name='mavenCentral' url='http://repo1.maven.org/maven2/' />
+    <repository name='grailsCentral' url='http://grails.org/plugins' />
+    <repository name='http://repo.grails.org/grails/core' url='http://repo.grails.org/grails/core/' />
+    <repository name='http://repo.grails.org/grails/plugins/' url='http://repo.grails.org/grails/plugins/' />
+  </repositories>
+  <dependencies />
+  <plugins>
+    <compile>
+      <plugin group='org.grails.plugins' name='jrimum-bopepo' version='0.4' />
+      <plugin group='org.grails.plugins' name='spring-security-core' version='1.2.7.3' />
+    </compile>
+    <build>
+      <plugin group='org.grails.plugins' name='tomcat' version='2.2.3' />
+    </build>
+  </plugins>
+  <runtimePluginRequirements />
+  <behavior />
+</plugin>

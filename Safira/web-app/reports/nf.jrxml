@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="darf" language="groovy" pageWidth="1500" pageHeight="595" orientation="Landscape" columnWidth="1460" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d802dc9a-75e7-495d-98f0-552d920ea924">
+	<property name="ireport.zoom" value="3.138428376721004"/>
+	<property name="ireport.x" value="3341"/>
+	<property name="ireport.y" value="86"/>
+	<style name="Title" fontName="Arial" fontSize="26" isBold="true" pdfFontName="Helvetica-Bold"/>
+	<style name="SubTitle" forecolor="#666666" fontName="Arial" fontSize="18"/>
+	<style name="Column header" forecolor="#666666" fontName="Arial" fontSize="12" isBold="true"/>
+	<style name="Detail" fontName="Arial" fontSize="12"/>
+	<parameter name="titulo" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA[Relatório]]></defaultValueExpression>
+	</parameter>
+	<parameter name="apuracao_from" class="java.lang.String"/>
+	<parameter name="apuracao_to" class="java.lang.String"/>
+	<parameter name="empresa.id" class="java.lang.Integer"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="empresa" class="java.lang.String"/>
+	<field name="parceiro_negocios" class="java.lang.String"/>
+	<field name="id" class="java.lang.String"/>
+	<field name="dt_e_s" class="java.lang.String"/>
+	<field name="mensagens" class="java.lang.String"/>
+	<field name="modelo.id" class="java.lang.String"/>
+	<field name="num_doc" class="java.lang.String"/>
+	<field name="tipo_importacao" class="java.lang.String"/>
+	<field name="documento_origem" class="java.lang.String"/>
+	<title>
+		<band height="35" splitType="Stretch">
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="b6081b34-adc4-41a6-ab97-990ce803a41f" style="Title" stretchType="RelativeToTallestObject" x="0" y="2" width="802" height="33"/>
+				<textElement verticalAlignment="Middle" markup="none">
+					<font size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{titulo}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="16" splitType="Stretch">
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="0" y="0" width="100" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Empresa]]></text>
+			</staticText>
+			<line>
+				<reportElement uuid="1803ad1a-6a3e-44c5-a9bd-2a77b99c4c5d" positionType="FixRelativeToBottom" x="0" y="15" width="1460" height="1"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="265" y="0" width="100" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ParceiroNegocios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="789" y="0" width="52" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[ID da NF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="857" y="0" width="52" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Modelo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="921" y="0" width="52" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Num. Doc.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="985" y="1" width="64" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Tipo Imp.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="1049" y="0" width="57" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Data E/S]]></text>
+			</staticText>
+			<staticText>
+				<reportElement uuid="ba01e442-3ebb-47fc-872f-b28b2d293d4b" style="Column header" x="1106" y="0" width="57" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<text><![CDATA[Erros]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="16" splitType="Stretch">
+			<textField>
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="0" y="0" width="265" height="15"/>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{empresa}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="265" y="1" width="524" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{parceiro_negocios}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="789" y="1" width="52" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="857" y="1" width="64" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{modelo.id}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="921" y="1" width="64" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{num_doc}]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true">
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="985" y="1" width="64" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{tipo_importacao}]]></textFieldExpression>
+			</textField>
+			<textField pattern="">
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" x="1049" y="1" width="57" height="15"/>
+				<textElement textAlignment="Right">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dt_e_s}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement uuid="bf599609-ecc0-4be7-a18d-0a4d8ef04e87" style="Detail" stretchType="RelativeToBandHeight" x="1106" y="1" width="354" height="15"/>
+				<textElement textAlignment="Left">
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{mensagens}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20" splitType="Stretch">
+			<textField>
+				<reportElement uuid="89ea945c-9e20-4f14-8481-19688bb5dea9" style="Column header" x="433" y="0" width="80" height="20"/>
+				<textElement textAlignment="Right">
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Página "+$V{PAGE_NUMBER}+" de"]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement uuid="dcce422a-5542-4c83-86e7-47984b305eb7" style="Column header" x="513" y="0" width="40" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement uuid="d516beab-e703-4327-93ab-2bfa5b1dfa76" style="Column header" x="0" y="0" width="197" height="20"/>
+				<textElement>
+					<font size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>
