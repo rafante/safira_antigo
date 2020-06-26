@@ -280,7 +280,7 @@ class PlanoContasController extends BaseController {
             def creditos = []
 
             contasReceber.each { ContaReceber conta ->
-                if (conta.planoContas.id == plano.id)
+                if (conta.planoContas.codigo == plano.codigo)
                     creditos << conta
             }
             BigDecimal creditosValor = 0
@@ -291,7 +291,7 @@ class PlanoContasController extends BaseController {
             //Movimentos financeiros
             creditos.clear()
             movFinanceiros.each { MovimentoFinanceiro movimento ->
-                if (movimento.planoContas.id == plano.id && movimento.valor > 0)
+                if (movimento.planoContas.codigo == plano.codigo && movimento.valor > 0)
                     creditos << movimento
             }
             creditos.each {
@@ -300,7 +300,7 @@ class PlanoContasController extends BaseController {
 
             def debitos = []
             contasPagar.each { ContaPagar conta ->
-                if (conta.planoContas.id == plano.id)
+                if (conta.planoContas.codigo == plano.codigo)
                     debitos << conta
             }
             BigDecimal debitosValor = 0
@@ -311,7 +311,7 @@ class PlanoContasController extends BaseController {
             //Movimentos financeiros
             debitos.clear()
             movFinanceiros.each { MovimentoFinanceiro movimento ->
-                if (movimento.planoContas.id == plano.id && movimento.valor < 0)
+                if (movimento.planoContas.codigo == plano.codigo && movimento.valor < 0)
                     debitos << movimento
             }
             debitos.each {
@@ -336,8 +336,10 @@ class PlanoContasController extends BaseController {
             if (children.size()) {
                 children.each { child ->
                     def pl = ret.find { it.codigo == child.codigo }
-                    creditosValor += pl.creditos
-                    debitosValor += pl.debitos
+                    if(!pl.plano.temFilhos){
+                        creditosValor += pl.creditos
+                        debitosValor += pl.debitos
+                    }
                 }
 
                 r.creditos += creditosValor
